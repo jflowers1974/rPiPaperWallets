@@ -24,7 +24,13 @@ __Target Cryptocurrencies:__
 
 Assumes that you have a base copy of Jessie on a 8 GB (or higher) microSD card, and internet connectivity.  Still this will be turning OFF WiFi - it probably makes sense that you have your Raspberry Pi 3 (again others may work) connected via ethernet cable. The WiFi should be turned off at the very end though - just incase you cannot make a physical connection. 
 
+Ensure that you make the script executable prior to running:
 
+'rPi> chmod +x rPiPaperWallet.sh <enter>'
+
+Then run the script:
+
+'rPi> ./rPiPaperWallet.sh <enter>'
 
 # Additional Resources
 
