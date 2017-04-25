@@ -1,31 +1,20 @@
 # rPiPaperWallets
 A setup script for a raspberry pi paper wallet machine.
 
-Last UPDATE:  April 24 2017
+Last UPDATE:  2017 April 24 
 
 # Motivation
 
 Need a standard protocol to help speedup the setup of multiple paperwallet softwares.  Hopefully this script will assist in doing just that.  This should assist in the setup of a Raspberry Pi 3 (others should also work) both regard to the OS updating/printing/usb as well numerous target cryptocurrencies.
 
-__Operating System Modifications:__
+__A)  Operating System Modifications:__
 * System Update && Upgrade
 * CUPS for Printing
-* FUSE for USB Connection
-* Turning ON Hardware Random Number Generator
-* Turning OFF WiFi
+* FUSE for USB Thumbdrives
+* Turning ON Hardware Random Number Generator and testing
+* Turning OFF WiFi - At the very end
 
-__Target Paperwallet SW for Cryptocurrencies:__
-* Bitcoin (https://www.bitaddress.org)
-  * Version 2.9.11
-  * Version 3.3.0
-* Bitcoin (https://www.bitaddress.org/?testnet=true)
-  * Version 3.3.0
-* Litecoin (https://liteaddress.org/)
-  * Version 2.9.8
-* Monero ()
-* Lisk ()
-
-__Useful Tools:__
+__B) Useful Tools:__
 * Bitcoin 
   * Vanity Generator
     * https://github.com/klynastor/supervanitygen
@@ -35,6 +24,16 @@ __Useful Tools:__
 * TrueCrypt 7.1a
 * XXX
 
+__C) Target Paperwallet SW for Cryptocurrencies:__
+* Bitcoin (https://www.bitaddress.org)
+  * Version 2.9.11
+  * Version 3.3.0
+* Bitcoin (https://www.bitaddress.org/?testnet=true)
+  * Version 3.3.0
+* Litecoin (https://liteaddress.org/)
+  * Version 2.9.8
+* Monero ()
+* Lisk ()
 
 # Usage
 
