@@ -27,10 +27,10 @@ __Target Paperwallet SW for Cryptocurrencies:__
 
 __Useful Tools:__
 * Bitcoin 
-  *Vanity Generator
-    *https://github.com/klynastor/supervanitygen
-  *Brain Wallet
-    *https://github.com/brainwalletX/brainwalletX.github.io
+  * Vanity Generator
+    * https://github.com/klynastor/supervanitygen
+  * Brain Wallet
+    * https://github.com/brainwalletX/brainwalletX.github.io
 * VeraCrypt
 * TrueCrypt 7.1a
 * XXX
