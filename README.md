@@ -26,11 +26,11 @@ Assumes that you have a base copy of Jessie on a 8 GB (or higher) microSD card, 
 
 Ensure that you make the script executable prior to running:
 
-'rPi> chmod +x rPiPaperWallet.sh <enter>'
+'''rPi> chmod +x rPiPaperWallet.sh <enter>'''
 
 Then run the script:
 
-'rPi> ./rPiPaperWallet.sh <enter>'
+'''rPi> ./rPiPaperWallet.sh <enter>'''
 
 # Additional Resources
 
