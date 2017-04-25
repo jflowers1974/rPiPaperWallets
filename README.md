@@ -16,14 +16,14 @@ __Operating System Modifications:__
 
 __Target Paperwallet SW for Cryptocurrencies:__
 * Bitcoin (https://www.bitaddress.org)
-  *Version 2.9.11
-  *Version 3.3.0
+  * Version 2.9.11
+  * Version 3.3.0
 * Bitcoin (https://www.bitaddress.org/?testnet=true)
-  *Version 3.3.0
+  * Version 3.3.0
 * Litecoin (https://liteaddress.org/)
-  *Version 2.9.8
-* Monero
-* Lisk
+  * Version 2.9.8
+* Monero ()
+* Lisk ()
 
 __Useful Tools:__
 * Bitcoin 
