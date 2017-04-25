@@ -1,5 +1,7 @@
 # rPiPaperWallets
-A setup script for a raspberry pi paper wallet machine
+A setup script for a raspberry pi paper wallet machine.
+
+Last UPDATE:  April 24 2017
 
 # Motivation
 
@@ -12,12 +14,26 @@ __Operating System Modifications:__
 * Turning ON Hardware Random Number Generator
 * Turning OFF WiFi
 
-__Target Cryptocurrencies:__
-* Bitcoin
-* Bitcoin (Testnet)
-* Litecoin
+__Target Paperwallet SW for Cryptocurrencies:__
+* Bitcoin (https://www.bitaddress.org)
+  *Version 2.9.11
+  *Version 3.3.0
+* Bitcoin (https://www.bitaddress.org/?testnet=true)
+  *Version 3.3.0
+* Litecoin (https://liteaddress.org/)
+  *Version 2.9.8
 * Monero
 * Lisk
+
+__Useful Tools:__
+* Bitcoin 
+  *Vanity Generator
+    *https://github.com/klynastor/supervanitygen
+  *Brain Wallet
+    *https://github.com/brainwalletX/brainwalletX.github.io
+* VeraCrypt
+* TrueCrypt 7.1a
+* XXX
 
 
 # Usage
