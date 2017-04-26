@@ -55,5 +55,11 @@ Then run the script:
 * https://github.com/klynastor/supervanitygen
 * https://github.com/brainwalletX/brainwalletX.github.io
 * https://www.bitaddress.org
+* https://liteaddress.org/
+* 
 
-XXX
+# Future Goals
+
+[] cURL - as this would probably be easier to deploy
+[] More complex flowcontrol logic
+[] Log File
