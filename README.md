@@ -60,6 +60,6 @@ Then run the script:
 
 # Future Goals
 
-[] cURL - as this would probably be easier to deploy
-[] More complex flowcontrol logic
-[] Log File
+[ ] cURL - as this would probably be easier to deploy
+[ ] More complex flowcontrol logic
+[ ] Log File
