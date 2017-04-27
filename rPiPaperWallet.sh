@@ -33,7 +33,7 @@ if [ -f ~/rPiPaperWalletLog.txt ]
 uname -a >> ~/rPiPaperWalletLog.txt
 lsb_release -a >> ~/rPiPaperWalletLog.txt
 echo $BASH_RELEASE >> ~/rPiPaperWalletLog.txt
-rPiType=$(uname -a | awk {'print $12})
+rPiType=$(uname -a | awk '{ print $12 }')
 
 # OS Updating
 clear
@@ -43,7 +43,7 @@ sleep 2
 sudo apt-get install -y build-essential automake autoconf libtool libgmp3-dev
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
 sudo apt-get update && sudo apt-get upgrade -y
-echo "INSTALLED: update &&  upgrade" >> ~/rPiPaperWalletLog.txt
+echo "INSTALLED: Update && Upgrade" >> ~/rPiPaperWalletLog.txt
 sudo ldconfig 
 clear
 
@@ -70,8 +70,29 @@ echo "Installing software for an Hardware Random Number Generator"
 sleep 2
 sudo apt-get install -y rng-tools
 echo "INSTALLED: RNG-TOOLS" >> ~/rPiPaperWalletLog.txt
-echo "bcm2708-rng" >> /etc/modules
-# Need to complete setup of this tool
+sudo -i
+echo "bcm2708-rng" | sudo tee --append /etc/modules
+echo "HRNGDEVICE=/dev/hwrng" | sudo tee --append /etc/default/rng-tools
+sudo service rng-tools restart
+clear
+
+# Testing the Hardware Random Number Generator
+# Could be VASTLY improved
+# Use the type of computer and bench the HWRNG creating a set of speeds
+# Then compare these with the present
+# Also - one should really do this testing three times and take the average
+#
+
+sleep 2 # doing this to calm down the computer before the next computation
+
+rPiSpeed=$(sudo dd bs=128 count=1024 if=/dev/random of=/home/pi/random.txt |& awk '/copied/ { print $8 }')
+if [ $(echo $rPiSpeed'<'45.0 ];then
+  echo "Hardware Random Number Generator Working Great" >> ~/rPiPaperWalletLog.txt
+else
+  clear
+  echo "Hardware Random Number Generator Seems to be in error"
+  exit 1
+fi
 clear
 
 # Vanity Generator
