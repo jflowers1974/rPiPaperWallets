@@ -46,6 +46,7 @@ clear
 # Installing CUPS
 # https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/
 echo "Installing CUPS for Printing"
+echo "======================================================="
 sleep 2
 sudo apt-get install cups -y
 echo "INSTALLED: CUPS" >> ~/rPiPaperWalletLog.txt
@@ -56,6 +57,7 @@ clear
 
 # Installing exfat-FUSE
 echo "Installing software for an external USB drive"
+echo "======================================================="
 sleep 2
 sudo apt-get install -y exfat-fuse
 echo "INSTALLED: exfat-fuse" >> ~/rPiPaperWalletLog.txt
@@ -63,15 +65,10 @@ clear
 
 # Installing rng-tools
 echo "Installing software for an Hardware Random Number Generator"
+echo "======================================================="
 sleep 2
 sudo apt-get install -y rng-tools
 echo "INSTALLED: RNG-TOOLS" >> ~/rPiPaperWalletLog.txt
-
-# sudo -i
-# echo "bcm2708-rng" | sudo tee --append /etc/modules
-# echo "HRNGDEVICE=/dev/hwrng" | sudo tee --append /etc/default/rng-tools
-# exit
-
 sudo bash -c \"bcm2708-rng" >> /etc/modules
 sudo bash -c \"HRNGDEVICE=/dev/hwrng" >> /etc/default/rng-tools
 
@@ -89,13 +86,12 @@ clear
 # therefore, the 45.0 is a split - that could be fixed later.
 
 sleep 2 # doing this to calm down computer prior to these calculations
-  
+
 rPiSpeed=$(sudo dd bs=128 count=1024 if=/dev/random of=/home/pi/random.txt |& awk '/copied/ { print $8 }')
 if [ $(echo $rPiSpeed'<'45.0) ];then
-  echo "Hardware Random Number Generator Working Great" >> ~/rPiPaperWalletLog.txt
+  echo "CALC: Hardware Random Number Generator Working Great" >> ~/rPiPaperWalletLog.txt
 else
-  clear
-  echo "Hardware Random Number Generator Seems to be in error!"
+  echo "CALC: Hardware Random Number Generator Seems to be in error!"
   echo "ERROR: Hardware Randome Number Generator Tests FAILED!" >> ~/rPiPaperWalletLog.txt
   exit 1
 fi
@@ -103,6 +99,7 @@ clear
 
 # Vanity Generator
 echo "Installing a Bitcoin Vanity Generator Software"
+echo "======================================================="
 sleep 2
 cd ~
 if [ -d "supervanitygen" ];then
@@ -121,6 +118,7 @@ clear
 
 # Brain Wallet
 echo "Installing a Brainwallet Suite"
+echo "======================================================="
 sleep 2
 cd ~
 if [ -d "brainwalletX.github.io" ];then
