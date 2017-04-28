@@ -88,12 +88,12 @@ clear
 # Use the type of computer and bench the HWRNG creating a set of speeds
 # Then compare these with the present
 # Also - one should really do this testing three times and take the average
-# For example a raspberry pi 3 should take ~35 sec if everything is working ok
-# and >60 if the hardware randome number generator is not working
+# For example a raspberry pi 3 should run around ~35 kb/sec if everything is working ok
+# and >60 if the hardware random number generator is not working
 # therefore, the 45.0 is a split - that could be fixed later.
 
 sleep 2 # doing this to calm down computer prior to these calculations
-
+  
 rPiSpeed=$(sudo dd bs=128 count=1024 if=/dev/random of=/home/pi/random.txt |& awk '/copied/ { print $8 }')
 if [ $(echo $rPiSpeed'<'45.0 ];then
   echo "Hardware Random Number Generator Working Great" >> ~/rPiPaperWalletLog.txt
