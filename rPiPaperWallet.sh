@@ -1,15 +1,5 @@
 #!/bin/bash
 
-if false
-then 
-  A:: Operating System Updates/Installs
-   Tools Install - Update - Upgrade - ldconfig - CUPS - FUSE - HWRNG - Final Update/upgrade/ldconfig
-  B:: Useful Tools
-    Vanity Gen - Encryption - 
-  C:: Paperwallet Software
-    Targets:: Bitcoin (Main and Testnet) - Litecoin - Monero - LISK - Ethereum - 
-fi
-
 clear
 echo "======================================================="
 echo "Source: https://github.com/jflowers1974/rPiPaperWallets"
