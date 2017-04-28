@@ -34,6 +34,7 @@ rPiType=$(uname -a | awk '{ print $12 }')
 # OS Updating
 clear
 echo "Updating the OS"
+echo "======================================================="
 sleep 2
 # Still using apt-get instead of the newer apt, as of Jessie apt-get seems to be more robust still
 sudo apt-get install -y build-essential automake autoconf libtool libgmp3-dev zip unzip
@@ -74,7 +75,6 @@ sudo bash -c \"HRNGDEVICE=/dev/hwrng" >> /etc/default/rng-tools
 
 sudo service rng-tools restart
 echo "INSTALLED: Hardware RNG Restarted" >> ~/rPiPaperWalletLog.txt
-clear
 
 # Testing the Hardware Random Number Generator
 # Could be VASTLY improved
@@ -85,6 +85,7 @@ clear
 # and >60 if the hardware random number generator is not working
 # therefore, the 45.0 is a split - that could be fixed later.
 
+echo "Running Hardware Random Number Generator Test Suite"
 sleep 2 # doing this to calm down computer prior to these calculations
 
 rPiSpeed=$(sudo dd bs=128 count=1024 if=/dev/random of=/home/pi/random.txt |& awk '/copied/ { print $8 }')
@@ -95,6 +96,8 @@ else
   echo "ERROR: Hardware Randome Number Generator Tests FAILED!" >> ~/rPiPaperWalletLog.txt
   exit 1
 fi
+echo "Hardare Randome Number Generator Works Fine"
+sleep 2
 clear
 
 # Vanity Generator
