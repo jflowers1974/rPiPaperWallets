@@ -85,7 +85,7 @@ clear
 sleep 2 # doing this to calm down computer prior to these calculations
   
 rPiSpeed=$(sudo dd bs=128 count=1024 if=/dev/random of=/home/pi/random.txt |& awk '/copied/ { print $8 }')
-if [ $(echo $rPiSpeed'<'45.0 ];then
+if [ $(echo $rPiSpeed'<'45.0) ];then
   echo "Hardware Random Number Generator Working Great" >> ~/rPiPaperWalletLog.txt
 else
   clear
