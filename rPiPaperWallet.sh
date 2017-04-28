@@ -66,12 +66,14 @@ echo "Installing software for an Hardware Random Number Generator"
 sleep 2
 sudo apt-get install -y rng-tools
 echo "INSTALLED: RNG-TOOLS" >> ~/rPiPaperWalletLog.txt
-sudo -i
-echo "bcm2708-rng" | sudo tee --append /etc/modules
-echo "HRNGDEVICE=/dev/hwrng" | sudo tee --append /etc/default/rng-tools
-exit
 
+# sudo -i
+# echo "bcm2708-rng" | sudo tee --append /etc/modules
+# echo "HRNGDEVICE=/dev/hwrng" | sudo tee --append /etc/default/rng-tools
+# exit
 
+sudo bash -c \"bcm2708-rng" >> /etc/modules
+sudo bash -c \"HRNGDEVICE=/dev/hwrng" >> /etc/default/rng-tools
 
 sudo service rng-tools restart
 echo "INSTALLED: Hardware RNG Restarted" >> ~/rPiPaperWalletLog.txt
