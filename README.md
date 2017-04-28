@@ -54,6 +54,7 @@ Then run the script:
 * https://www.raspberrypi.org/downloads/raspbian/
 * https://github.com/klynastor/supervanitygen
 * https://github.com/brainwalletX/brainwalletX.github.io
+* https://veracrypt.codeplex.com/wikipage?title=Contributed%20Resources
 * https://www.bitaddress.org
 * https://liteaddress.org/
 * 
