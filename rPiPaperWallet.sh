@@ -69,6 +69,10 @@ echo "INSTALLED: RNG-TOOLS" >> ~/rPiPaperWalletLog.txt
 sudo -i
 echo "bcm2708-rng" | sudo tee --append /etc/modules
 echo "HRNGDEVICE=/dev/hwrng" | sudo tee --append /etc/default/rng-tools
+exit
+
+
+
 sudo service rng-tools restart
 echo "INSTALLED: Hardware RNG Restarted" >> ~/rPiPaperWalletLog.txt
 clear
