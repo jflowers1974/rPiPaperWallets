@@ -50,6 +50,12 @@ echo "Updating the OS:"
 echo "======================================================="
 sleep 2
 
+# Future work - use an array and then cycle through dpkg to reduce the need for installs
+# Maybe even load a file with all of these into it
+#
+declare -a updateArray=(build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0)
+updateArrayLen=${#updateArray[@]}
+
 sudo apt-get install -y build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
 sudo apt-get update && sudo apt-get upgrade -y
