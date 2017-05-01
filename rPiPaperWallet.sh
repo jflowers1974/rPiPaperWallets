@@ -8,9 +8,20 @@ echo "This will perform the necessary scripts to ensure your Raspberry Pi"
 echo "is updated and install the needed sofware for"
 echo "various target coins."
 sleep 2
+
+clear
+echo "======================================================="
+echo "Install Workflow"
+echo "======================================================="
+echo "Stage 1:  Update OS and install core packages"
+echo "Stage 2:  Install Utilities"
+echo "Stage 3:  Install Coin Specific Apps"
+echo "Stage 4:  (Future) Install a landing HTML page"
+sleep 2
 clear
 
 #Log file generation
+#
 echo "Checking for a log file..."
 if [ -f ~/rPiPaperWalletLog.txt ];then
   echo "Congrats your logfile exists - please refer to this file in the event of a problem"
@@ -28,14 +39,17 @@ echo "=======================================================" >> ~/rPiPaperWall
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 
 # To be used a bit later - for benchmarking purpose and Timing
+#
 rPiType=$(uname -a | awk '{ print $12 }')
 
 # OS Updating
-clear
-echo "Updating the OS"
+# NOTE - Still using apt-get instead of apt, for max robustiness regardless of OS
+#
+echo "======================================================="
+echo "Updating the OS:"
 echo "======================================================="
 sleep 2
-# Still using apt-get instead of the newer apt, as of Jessie apt-get seems to be more robust still
+
 sudo apt-get install -y build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
 sudo apt-get update && sudo apt-get upgrade -y
@@ -45,7 +59,9 @@ clear
 
 # Installing CUPS
 # https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/
-echo "Installing CUPS for Printing"
+#
+echo "======================================================="
+echo "Installing CUPS for Printing:"
 echo "======================================================="
 sleep 2
 sudo apt-get install -y cups
@@ -56,7 +72,9 @@ sudo /etc/init.d/cups restart
 clear
 
 # Installing exfat-FUSE
-echo "Installing software for an external USB drive"
+#
+echo "======================================================="
+echo "Installing External USB drive Software:"
 echo "======================================================="
 sleep 2
 sudo apt-get install -y exfat-fuse
@@ -64,7 +82,9 @@ echo "INSTALLED: exfat-fuse" >> ~/rPiPaperWalletLog.txt
 clear
 
 # Installing rng-tools
-echo "Installing software for an Hardware Random Number Generator"
+#
+echo "======================================================="
+echo "Installing Hardware Random Number Generator Software:"
 echo "======================================================="
 sleep 2
 sudo apt-get install -y rng-tools
@@ -101,7 +121,9 @@ sleep 2
 clear
 
 # Installing Vanity Generator
-echo "Installing a Bitcoin Vanity Generator Software"
+#
+echo "======================================================="
+echo "Installing a Bitcoin Vanity Generator Software:"
 echo "======================================================="
 sleep 2
 cd ~
@@ -120,7 +142,9 @@ fi
 clear
 
 # Installing Brain Wallet
-echo "Installing a Brainwallet Suite"
+#
+echo "======================================================="
+echo "Installing a Brainwallet Suite:"
 echo "======================================================="
 sleep 2
 cd ~
@@ -154,7 +178,9 @@ clear
 #clear
 
 # Installing Bitaddress
-echo "Installing Bitaddress.org"
+#
+echo "======================================================="
+echo "Installing Bitaddress.org:"
 echo "======================================================="
 sleep 2
 cd ~
