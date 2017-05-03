@@ -59,8 +59,9 @@ updateArrayLen=${#updateArray[@]}
 sudo apt-get install -y build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
 sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get clean
+sudo ldconfig
 echo "INSTALLED: Update && Upgrade" >> ~/rPiPaperWalletLog.txt
-sudo ldconfig 
 clear
 
 # Installing CUPS
