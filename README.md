@@ -1,7 +1,9 @@
 # rPiPaperWallets.sh
-A setup script for a raspberry pi paper wallet machine.
+A setup script for a raspberry pi paper wallet machine, for a number of cryptocurrencies. The script will install OS utilies and tools related to the creation and security of your raspberry pi system to perform necessary functions.  The other portion is the installation of an HTML file that allows for easy access of some of the more important tools.  It should be noted that the webpage, rPi.html, was optimized for a Raspberry Pi Foundation's 7" LCD touchscreen. 
 
-Last UPDATE:  2017 April 24 
+My raspberry pi unit is dedicated to this feature and thus this setup is most appropriate for me.  Please change as you see fit.  Also, I just added this second part, and so the links are probably not working.
+
+Last UPDATE:  2017 June 24 
 
 # Motivation:
 
@@ -37,9 +39,14 @@ __C) Target Paperwallet SW for Cryptocurrencies:__
 * Monero ()
 * Lisk ()
 
+__D) Web Interface:__
+* Install the landing HTML file ( rPi.html )
+  * TODO: Get it to autostart - although I don't know if that would be ideal for all users
+* Links for all the tools
+
 # Usage:
 
-Assumes that you have a base copy of Jessie on a 8 GB (or higher) microSD card, and internet connectivity.  Still this will be turning OFF WiFi - it probably makes sense that you have your Raspberry Pi 3 (again others may work) connected via ethernet cable. The WiFi should be turned off at the very end though - just incase you cannot make a physical connection. 
+Assumes that you have a base copy of Jessie on a 8 GB (or higher) microSD card, and internet connectivity ( via direct ethernet cabling .)  As this script will be turning OFF your computer's WiFi. You can start off the script the first time with WiFi, though WiFi will be turned off at the  end though - just incase you cannot make a physical connection. 
 
 Ensure that you make the script executable prior to running:
 
