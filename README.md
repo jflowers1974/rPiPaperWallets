@@ -56,6 +56,13 @@ Then run the script:
 
 `rPi> ./rPiPaperWallet.sh <enter>`
 
+To perform an update in the future.  First change directory to the script, then remove 'x' and finally perform a pull request:
+
+`rPi> chmod -x rPiPaperWallet.sh <enter>`
+`rPi> git pull <enter>`
+
+Then run the script as before.
+
 # Additional Resources:
 
 * https://www.raspberrypi.org/downloads/raspbian/
