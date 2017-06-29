@@ -58,9 +58,8 @@ Then run the script:
 
 To perform an update in the future.  First change directory to the script, then remove 'x' and finally perform a pull request:
 
-`rPi> chmod -x rPiPaperWallet.sh <enter>`
-
-`rPi> git pull <enter>`
+`rPi> chmod -x rPiPaperWallet.sh <enter>
+rPi> git pull <enter>`
 
 Then run the script as before.
 
