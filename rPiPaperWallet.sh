@@ -56,10 +56,10 @@ sleep 2
 declare -a updateArray=(build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0)
 updateArrayLen=${#updateArray[@]}
 
-sudo apt-get install -y build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
+sudo apt install -y git build-essential exfat-fuse automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get clean
+sudo apt update && sudo apt-get upgrade -y
+sudo apt clean
 sudo ldconfig
 echo "INSTALLED: Update && Upgrade" >> ~/rPiPaperWalletLog.txt
 clear
@@ -71,7 +71,7 @@ echo "======================================================="
 echo "Installing CUPS for Printing:"
 echo "======================================================="
 sleep 2
-sudo apt-get install -y cups
+sudo apt install -y cups
 echo "INSTALLED: CUPS" >> ~/rPiPaperWalletLog.txt
 sudo usermod -a -G lpadmin pi
 #Need to comment out and add various files
@@ -84,7 +84,7 @@ echo "======================================================="
 echo "Installing External USB drive Software:"
 echo "======================================================="
 sleep 2
-sudo apt-get install -y exfat-fuse
+sudo apt install -y exfat-fuse
 echo "INSTALLED: exfat-fuse" >> ~/rPiPaperWalletLog.txt
 clear
 
@@ -94,7 +94,7 @@ echo "======================================================="
 echo "Installing Hardware Random Number Generator Software:"
 echo "======================================================="
 sleep 2
-sudo apt-get install -y rng-tools
+sudo apt install -y rng-tools
 echo "INSTALLED: RNG-TOOLS" >> ~/rPiPaperWalletLog.txt
 sudo bash -c \"bcm2708-rng" >> /etc/modules
 sudo bash -c \"HRNGDEVICE=/dev/hwrng" >> /etc/default/rng-tools
