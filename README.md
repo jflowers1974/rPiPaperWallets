@@ -1,5 +1,5 @@
 # rPiPaperWallets.sh
-A setup script for a raspberry pi paper wallet machine, for a number of cryptocurrencies. The script will install OS utilies and tools related to the creation and security of your raspberry pi system to perform necessary functions.  The other portion is the installation of an HTML file that allows for easy access of some of the more important tools.  It should be noted that the webpage, rPi.html, was optimized for a Raspberry Pi Foundation's 7" LCD touchscreen. 
+A setup script for a raspberry pi paper wallet machine, for a number of cryptocurrencies. The script will install OS utilities and tools related to the creation and security of your raspberry pi system to perform necessary functions.  The other portion is the installation of an HTML file that allows for easy access of some of the more important tools.  It should be noted that the webpage, rPi.html, was optimized for a Raspberry Pi Foundation's 7" LCD touchscreen. 
 
 My raspberry pi unit is dedicated to this feature and thus this setup is most appropriate for me.  Please change as you see fit.  Also, I just added this second part, and so the links are probably not working.
 
@@ -14,7 +14,7 @@ Needed a standard protocol to speedup the setup of a raspberry pi computer for t
 __A)  Operating System Modifications:__
 * System Update && Upgrade
 * CUPS for Printing
-* FUSE for USB Thumbdrives
+* FUSE for USB thumb drives
 * Turning ON Hardware Random Number Generator and testing
 * Turning OFF WiFi - At the very end
 
@@ -32,7 +32,7 @@ __C) Target Paperwallet SW for Cryptocurrencies:__
 * Bitcoin (https://www.bitaddress.org)
   * Version 2.9.11
   * Version 3.3.0
-* Bitcoin (https://www.bitaddress.org/?testnet=true)
+* Bitcoin Testnet (https://www.bitaddress.org/?testnet=true)
   * Version 3.3.0
 * Litecoin (https://liteaddress.org/)
   * Version 2.9.8
@@ -72,10 +72,10 @@ Then run the script as before.
 * https://veracrypt.codeplex.com/wikipage?title=Contributed%20Resources
 * https://www.bitaddress.org
 * https://liteaddress.org/
-* 
+* https://siliconian.com
 
 # Future Goals
 
 - [ ] cURL - as this would probably be easier to deploy
-- [ ] More complex flowcontrol logic
+- [ ] More complex flow control logic
 - [ ] Log File
