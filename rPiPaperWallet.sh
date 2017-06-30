@@ -62,7 +62,7 @@ sleep 2
 declare -a updateArray=(build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0)
 updateArrayLen=${#updateArray[@]}
 
-sudo apt install -y git build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
+sudo apt install -y git build-essential automake autoconf libtool libgmp3-dev zip unzip unclutter libfuse-dev libfuse makeself libwxbase3.0-0
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
 sudo apt update && sudo apt upgrade -y
 sudo apt clean
