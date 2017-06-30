@@ -3,7 +3,7 @@ A setup script for a raspberry pi paper wallet machine, for a number of cryptocu
 
 My raspberry pi unit is dedicated to this feature and thus this setup is most appropriate for me.  Please change as you see fit.  Also, I just added this second part, and so the links are probably not working.
 
-Last UPDATE:  2017 June 29 c
+Last UPDATE:  2017 June 29 d
 
 # Motivation:
 
