@@ -51,6 +51,8 @@ __D) Web Interface:__
 
 Assumes that you have a base copy of Jessie on a 8 GB (or higher) microSD card, and internet connectivity ( via direct ethernet cabling .)  As this script will be turning OFF your computer's WiFi. You can start off the script the first time with WiFi, though WiFi will be turned off at the  end though - just incase you cannot make a physical connection.
 
+Furthermore, this script assumes that you have cloned it into your HOME directory.
+
 Ensure that you make the script executable prior to running:
 
 `rPi> chmod +x rPiPaperWallet.sh <enter>`
