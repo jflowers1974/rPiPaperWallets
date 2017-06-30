@@ -25,7 +25,9 @@ __B) Useful Tools:__
   * Brain Wallet
     * https://github.com/brainwalletX/brainwalletX.github.io
 * VeraCrypt
+    * https://www.veracrypt.fr/en/Downloads.html
 * TrueCrypt 7.1a
+    * https://www.truecrypt71a.com/downloads/
 * XXX
 * XXX
 
@@ -37,8 +39,8 @@ __C) Target Paperwallet SW for Cryptocurrencies:__
   * Version 3.3.0
 * Litecoin (https://liteaddress.org/)
   * Version 2.9.8
-* Monero ()
-* Lisk ()
+* Monero (https://moneroaddress.org/)
+* Lisk (http://liskpaperwallet.com/)
 
 __D) Web Interface:__
 * Install the landing HTML file ( rPi.html )

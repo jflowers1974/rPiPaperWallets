@@ -7,6 +7,8 @@ echo "======================================================="
 echo "This will perform the necessary scripts to ensure your Raspberry Pi"
 echo "is updated and install the needed sofware for"
 echo "various target coins."
+echo "======================================================="
+echo "======================================================="
 sleep 2
 
 clear
@@ -17,12 +19,16 @@ echo "Stage 1:  Update OS and install core packages"
 echo "Stage 2:  Install Utilities"
 echo "Stage 3:  Install Coin Specific Apps"
 echo "Stage 4:  (Future) Install a landing HTML page"
+echo "======================================================="
+echo "======================================================="
 sleep 2
 clear
 
 #Log file generation
 #
+echo "======================================================="
 echo "Checking for a log file..."
+echo "======================================================="
 if [ -f ~/rPiPaperWalletLog.txt ];then
   echo "Congrats your logfile exists - please refer to this file in the event of a problem"
   echo "This file can be found in ~/rPiPaperWalletLog.txt"
@@ -56,9 +62,9 @@ sleep 2
 declare -a updateArray=(build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0)
 updateArrayLen=${#updateArray[@]}
 
-sudo apt install -y git build-essential exfat-fuse automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
+sudo apt install -y git build-essential automake autoconf libtool libgmp3-dev zip unzip libfuse-dev libfuse makeself libwxbase3.0-0
 echo "INSTALLED: build-essential automake autoconf libtool libgmp3-dev" >> ~/rPiPaperWalletLog.txt
-sudo apt update && sudo apt-get upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt clean
 sudo ldconfig
 echo "INSTALLED: Update && Upgrade" >> ~/rPiPaperWalletLog.txt
@@ -103,7 +109,7 @@ sudo service rng-tools restart
 echo "INSTALLED: Hardware RNG Restarted" >> ~/rPiPaperWalletLog.txt
 #
 # Testing the Hardware Random Number Generator
-# 
+#
 # Could be VASTLY improved
 # Use the type of computer and bench the HWRNG creating a set of speeds
 # Then compare these with the present
@@ -174,13 +180,13 @@ clear
 #if [ -d "VeraCrypt" ];then
 #  cd ~/VeraCrypt
 #  git pull
-#  echo "UPDATED: VeraCrypt" >> ~/rPiPaperWalletLog.txt  
+#  echo "UPDATED: VeraCrypt" >> ~/rPiPaperWalletLog.txt
 #else
 #  git clone https://github.com/veracrypt/VeraCrypt.git
-#  cd VeraCrypt  
+#  cd VeraCrypt
 #  echo "UPDATED: VeraCrypt" >> ~/rPiPaperWalletLog.txt
 #fi
-# COMMANDS 
+# COMMANDS
 #cd ~
 #clear
 
@@ -193,18 +199,17 @@ sleep 2
 cd ~
 if [ -f "XXX" ];then
   echo "Bitaddress.org already installed"
-  
+
 else
   mkdir tmpBitAddr
   cd tmpBitAddr
   wget https://www.bitaddress.org/ninja_bitaddress.org.txt
   gpg --import ninja_bitaddress.org.txt
-  
+
 fi
- 
+
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 echo "END SCRIPT" >> ~/rPiPaperWalletLog.txt
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
-
