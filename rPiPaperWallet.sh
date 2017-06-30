@@ -208,8 +208,14 @@ else
 
 fi
 
+clear
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 echo "END SCRIPT" >> ~/rPiPaperWalletLog.txt
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
 echo "=======================================================" >> ~/rPiPaperWalletLog.txt
+sleep 2
+clear
+
+# Launching the website
+sensible-browser ~/rPiPaperWallets/RaspberryPi_PaperWallet.html
