@@ -75,6 +75,7 @@ Then run the script as before.
 * https://www.bitaddress.org
 * https://liteaddress.org/
 * https://siliconian.com
+* http://www.raspberry-projects.com/pi/pi-operating-systems/raspbian/gui/auto-run-browser-on-startup
 
 # Future Goals
 
